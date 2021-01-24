@@ -18,7 +18,7 @@ class App extends Component {
     this.fades();
     fetch('https://type.fit/api/quotes')
       .then(response => response.json())
-      .then(data => this.setState({ quote: data[0].text, author: data[0].author, data }));
+      .then(data => this.setState({ quote: data[Math.floor(Math.random() * 1643)].text, author: data[Math.floor(Math.random() * 1643)].author, data }));
   }
   generateRandomQuote(state) {
     this.fades();
